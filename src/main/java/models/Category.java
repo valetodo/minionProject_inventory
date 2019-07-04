@@ -1,8 +1,9 @@
-package models;
+package java.models;
 
 public class Category {
+
     private String name;
-    private String measurement;
+    private String unidadDeMedida;
 
     public String getName() {
         return name;
@@ -12,11 +13,16 @@ public class Category {
         this.name = name;
     }
 
-    public String getMeasurement() {
-        return measurement;
+    public String getUnidadDeMedida() {
+        return unidadDeMedida;
     }
 
-    public void setMeasurement(String measurement) {
-        this.measurement = measurement;
+    public void setUnidadDeMedida(String unidadDeMedida) {
+        this.unidadDeMedida = unidadDeMedida;
+    }
+
+    @Override
+    public String toString() {
+        return "{ name=" + name + ", unidadDeMedida=" + unidadDeMedida + '}';
     }
 }
