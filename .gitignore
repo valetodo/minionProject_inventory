@@ -1,0 +1,31 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+/.gradle/
+*/build/
+/.idea/
+/build/
+/out/
+*.xml
+*.html
+*.bat
+.gradle/
+.idea/
+gradle/
+*.iml
+*.ipr
+*.iws
+gradlew
+gradlew.bat
+out/
+/target/
+/.allure/
+*.DS_Store
+*.class
+*.bin
+*.idx
+*.css
+*.js
+*.jar
