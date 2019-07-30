@@ -1,10 +1,10 @@
-package models;
+package com.inventory;
 
-public Class Mark {
-	private String nameMark;
-	private String originMark;
+public class Mark {
+    private String nameMark;
+    private String originMark;
 
-	public String getNameMark() {
+    public String getNameMark() {
         return nameMark;
     }
 
@@ -18,5 +18,10 @@ public Class Mark {
 
     public void setOriginMark(String originMark) {
         this.originMark = originMark;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + "nameMark=" + nameMark + ", originMark=" + originMark + '}';
     }
 }

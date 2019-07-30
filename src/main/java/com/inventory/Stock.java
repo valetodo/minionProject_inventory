@@ -1,11 +1,11 @@
-package models;
+package com.inventory;
 
-public Class Stock {
-	private int maxQuantity;
-	private int minQuantity;
+public class Stock {
+    private int maxQuantity;
+    private int minQuantity;
 
-	public int getMaxQuantity() {
-        return nameMark;
+    public int getMaxQuantity() {
+        return maxQuantity;
     }
 
     public void setMaxQuantity(int maxQuantity) {
@@ -18,5 +18,9 @@ public Class Stock {
 
     public void setMinQuantity(int minQuantity) {
         this.minQuantity = minQuantity;
+    }
+
+    public boolean isQuantity(){
+        return minQuantity > 0;
     }
 }
