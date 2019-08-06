@@ -459,4 +459,8 @@ public class Inventory implements Serializable {
         }
     }
 
+    public static String getGreeting(){
+        String greeting = "Hello world";
+        return greeting;
+    }
 }
