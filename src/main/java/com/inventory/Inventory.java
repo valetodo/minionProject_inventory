@@ -437,7 +437,7 @@ public class Inventory implements Serializable {
         }
     }
 
-    private static String readString(){
+    public static String readString() {
         try{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String val = br.readLine();
@@ -459,7 +459,7 @@ public class Inventory implements Serializable {
         }
     }
 
-    public static String getGreeting(){
+    protected static String getGreeting(){
         String greeting = "Hello world";
         return greeting;
     }
