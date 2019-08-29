@@ -85,13 +85,18 @@ public class InventoryPersistence {
     }
 
     public Productbrand retrieveProductBrand(int markId){
-        Query query = entityManager.createNamedQuery("Productbrand.findByIdBrand", Productbrand.class);
+        Query query =  entityManager.createNativeQuery("SELECT * FROM Productbrand p WHERE p.id_brand =:idBrand");
+        //Query query =  entityManager.createNativeQuery("Test", Productbrand.class);
+
         query.setParameter("idBrand", markId);
+        //System.out.println(query.getFirstResult());
+        //System.out.println(query.setFirstResult(0));
+        //System.out.println(query.getSingleResult());
         List<Productbrand> result = query.getResultList();
         if(result.size() != 1){
             return null;
         }
-        return result.get(0);
+        return (Productbrand) query.getSingleResult();
     }
 
 
@@ -135,6 +140,7 @@ public class InventoryPersistence {
         entityManager.persist(value);
         entityManager.getTransaction()
                 .commit();
+        System.out.println("Record Successfully Inserted In The Database");
     }
 
 
@@ -144,6 +150,7 @@ public class InventoryPersistence {
         entityManager.persist(value);
         entityManager.getTransaction()
                 .commit();
+        System.out.println("Record Successfully Inserted In The Database");
     }
 
 

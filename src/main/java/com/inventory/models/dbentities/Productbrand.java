@@ -3,31 +3,18 @@ package com.inventory.models.dbentities;
 
 import java.io.Serializable;
 import java.util.Collection;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-/**
- *
- * @author ccalvi
- */
 @Entity
-@Table(name = "productbrand")
+@Table(name = "Productbrand")
 @XmlRootElement
 @NamedQueries({
-        @NamedQuery(name = "Productbrand.findAll", query = "SELECT p FROM Productbrand p")
-        , @NamedQuery(name = "Productbrand.findByIdBrand", query = "SELECT p FROM Productbrand p WHERE p.idBrand = :idBrand")})
+        @NamedQuery(name = "Productbrand.findAll", query = "SELECT p FROM Productbrand p"),
+        @NamedQuery(name = "Productbrand.findByIdBrand", query = "SELECT p FROM Productbrand p WHERE p.id_brand =:idBrand")
+})
+@NamedNativeQuery(name = "Test", query = "SELECT * FROM Productbrand p WHERE p.id_brand =:id_brand", resultClass = Productbrand.class)
 public class Productbrand implements Serializable {
 
     private static final long serialVersionUID = 1L;

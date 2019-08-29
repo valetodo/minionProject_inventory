@@ -34,8 +34,8 @@ public class InventoryController {
             Productbrand result = repository.retrieveProductBrand(id);
             return result;
         }catch(Exception ex){
+            ex.printStackTrace();
             System.out.println("Exception - retrieveProductBrand : " + ex.getMessage() + " / " + ex.getCause().getMessage());
-
         }
         return null;
     }

@@ -5,9 +5,7 @@ package com.inventory;
 
 import com.inventory.controller.InventoryController;
 import com.inventory.models.dbentities.Category;
-import com.inventory.models.dbentities.Inventory;
 import com.inventory.models.dbentities.Product;
-import com.inventory.models.dbentities.Productbrand;
 import com.inventory.repository.InventoryPersistence;
 import minionProject_inventory.App;
 import org.junit.Test;

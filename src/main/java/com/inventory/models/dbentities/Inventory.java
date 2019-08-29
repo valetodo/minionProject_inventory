@@ -15,10 +15,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author ccalvi
- */
 @Entity
 @Table(name = "inventory")
 @XmlRootElement

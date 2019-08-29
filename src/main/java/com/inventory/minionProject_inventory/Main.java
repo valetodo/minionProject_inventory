@@ -14,10 +14,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- * @author ccalvi
- */
 
 public class Main {
     public static InventoryController inventoryController;
@@ -56,6 +52,7 @@ public class Main {
                 case 1:{
                     printOut("[ SHOW PRODUCTS ]");
                     List<Inventory> products = inventoryController.showInventories();
+                    System.out.println("estoooo" + products);
                     for(Inventory i : products){
                         System.out.println("* " + i.printInfo());
                     }
